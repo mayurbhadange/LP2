@@ -1,0 +1,39 @@
+public class BFS {
+    public static void runBFS(Map<Integer, List<Integer>> graph, Integer startNode) {
+        Set<Integer> visited = new Set<Integer>();
+        List<Integer> queue = new List<Integer>();
+
+        queue.add(startNode);
+        visited.add(startNode);
+
+        while (!queue.isEmpty()) {
+            Integer current = queue.remove(0);
+            System.debug('Visited: ' + current);
+
+            if (graph.containsKey(current)) {
+                for (Integer neighbor : graph.get(current)) {
+                    if (!visited.contains(neighbor)) {
+                        queue.add(neighbor);
+                        visited.add(neighbor);
+                    }
+                }
+            }
+        }
+    }
+
+    public static void testBFS() {
+        // Example graph
+        Map<Integer, List<Integer>> graph = new Map<Integer, List<Integer>>();
+        graph.put(1, new List<Integer>{2, 3});
+        graph.put(2, new List<Integer>{4, 5});
+        graph.put(3, new List<Integer>{6});
+        graph.put(4, new List<Integer>());
+        graph.put(5, new List<Integer>());
+        graph.put(6, new List<Integer>());
+
+        runBFS(graph, 1); // Start BFS from node 1
+    }
+}
+
+
+BFS.testBFS();

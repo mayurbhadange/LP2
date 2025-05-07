@@ -1,0 +1,26 @@
+public class GeometryArea {
+    public static Double areaOfCircle(Double radius) {
+        return 3.14159 * radius * radius;
+    }
+
+    public static Double areaOfRectangle(Double length, Double width) {
+        return length * width;
+    }
+
+    public static Double areaOfTriangle(Double base, Double height) {
+        return 0.5 * base * height;
+    }
+
+    public static void calculateAllAreas() {
+        Double circleArea = areaOfCircle(5);
+        Double rectangleArea = areaOfRectangle(4, 6);
+        Double triangleArea = areaOfTriangle(3, 7);
+
+        System.debug('Circle Area: ' + circleArea);
+        System.debug('Rectangle Area: ' + rectangleArea);
+        System.debug('Triangle Area: ' + triangleArea);
+    }
+}
+
+
+GeometryArea.calculateAllAreas();

@@ -1,0 +1,25 @@
+public class PrimeChecker {
+
+    // Method to check if a number is prime
+    public static Boolean isPrime(Integer num) {
+        if (num <= 1) {
+            return false; // Numbers less than or equal to 1 are not prime
+        }
+        
+        for (Integer i = 2; i <= Math.sqrt(num); i++) {
+            if (num % i == 0) {
+                return false; // Divisible by a number other than 1 and itself, so not prime
+            }
+        }
+        
+        return true; // Prime number
+    }
+
+    // Example usage
+    public static void checkPrime() {
+        Integer number = 7;
+        System.debug(number + ' is prime: ' + isPrime(number));
+    }
+}
+
+PrimeChecker.checkPrime();

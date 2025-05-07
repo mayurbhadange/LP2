@@ -1,0 +1,21 @@
+public class CurrencyConverter {
+    public static Double inrToUsd(Double inr) {
+        Double rate = 0.012; // Example rate: 1 INR = 0.012 USD
+        return inr * rate;
+    }
+
+    public static Double usdToInr(Double usd) {
+        Double rate = 83.0; // Example rate: 1 USD = 83 INR
+        return usd * rate;
+    }
+
+    public static void testConversion() {
+        Double inr = 1000;
+        Double usd = 50;
+
+        System.debug(inr + ' INR = ' + inrToUsd(inr) + ' USD');
+        System.debug(usd + ' USD = ' + usdToInr(usd) + ' INR');
+    }
+}
+
+CurrencyConverter.testConversion();

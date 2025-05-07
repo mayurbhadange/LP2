@@ -1,0 +1,20 @@
+public class CompoundInterestCalculator {
+
+    // Method to calculate compound interest
+    public static Double calculateCompoundInterest(Double principal, Double rate, Integer time, Integer timesCompounded) {
+        return principal * Math.pow((1 + rate / timesCompounded), timesCompounded * time) - principal;
+    }
+
+    // Example usage
+    public static void calculate() {
+        Double principal = 1000.0;  // Initial amount
+        Double rate = 0.05;         // Interest rate (5%)
+        Integer time = 5;           // Time in years
+        Integer timesCompounded = 4; // Quarterly compounding
+
+        Double compoundInterest = calculateCompoundInterest(principal, rate, time, timesCompounded);
+        System.debug('Compound Interest: ' + compoundInterest);
+    }
+}
+
+CompoundInterestCalculator.calculate();

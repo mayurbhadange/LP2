@@ -1,0 +1,9 @@
+public class NaturalNumbers {
+    public static void printFirst100() {
+        for (Integer i = 1; i <= 100; i++) {
+            System.debug(i);
+        }
+    }
+}
+
+NaturalNumbers.printFirst100();
